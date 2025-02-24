@@ -1,0 +1,62 @@
+# Memory Assignment
+## 1. Flow Chart
+[Flow Chart Link](https://drive.google.com/file/d/1dvFqIKYr1IIvAptjUpwUL5y-3JrKs35w/view?usp=sharing)
+
+## 2. Things I found Challenging
+
+## 3. The Code
+Car Class 
+'''javascript
+package package3;
+
+public class Car {
+    String brand;
+    String name;
+    int year;
+
+    // Constructor For Car Brand, Model, and Year
+    Car(String brand,String name, int year) {
+        this.brand = brand;
+        this.name = name;
+        this.year = year;
+        //Using "this." To Connect the 2 Strings Even while In different Brackets.
+    }
+
+    // Code below will Print The
+    void print() {
+        System.out.println("Brand: "+ brand +", Model: " + name + ", Year: " + year);
+    }
+
+
+}
+'''
+
+MemDemo Class
+'''javascript
+package package3;
+
+public class MemDemo {
+    public static void main(String[] args) {
+        // Object 1 allocated in Heap
+        Car c1 = new Car("Toyota", "Camry", 2020);
+
+
+        // Object 2 allocated in Heap
+        Car c2 = new Car("Mazda", "RX7", 2015);
+
+
+        // p1 is now pointing to a new object, the previous "Alice" object becomes unreachable
+        c1 = new Car("Hyundai", "Accent", 2019);
+
+        c1.print(); //Prints the Replacement Of c1
+        c2.print();
+
+        // Forced The Garbage Collection, Even though It's Automatic Most of the time
+        System.gc(); //Deletes the First c1 (Toyota Camry)
+
+        System.out.println("Garbage Collected");
+    }
+
+}
+
+'''
