@@ -1,0 +1,115 @@
+# 5-6.3 OverRiding
+## 1. The Flow Chart
+[Flow Chart Link]()
+## 2. Parts I found Challenging
+This Assignment Felt more Challenging than the last Because Not only was there More information to output, but I spent I fair amount of Time Figuring out how to use a super correctly.
+## 4. The Working Code 
+### 4.1 Main Class
+```
+package sdccd;
+
+public class Main {
+    public static void main(String[] args) {
+        // Creates a new Book object
+        Book book = new Book();
+        book.setTitle("The Hobbit");
+        book.setAuthor("J. R. R. Tolkien");
+        book.setPublisher("George Allen & Unwin");
+        book.setPublicationDate("21 September 1937");
+        book.printAll();
+
+        // Creates a new Encyclopedia object
+        Encyclopedia encyclopedia = new Encyclopedia();
+        encyclopedia.setTitle("The Illustrated Encyclopedia of the Universe");
+        encyclopedia.setAuthor("Ian Ridpath");
+        encyclopedia.setPublisher("Watson-Guptill");
+        encyclopedia.setPublicationDate("2001");
+        encyclopedia.setEdition("2nd");
+        encyclopedia.setNumPages(384);
+        encyclopedia.printAll();
+    }
+}
+```
+### 4.2 Book Class
+```
+package sdccd;
+
+public class Book {
+    private String title;
+    private String author;
+    private String publisher;
+    private String publicationDate;
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public void setPublicationDate(String publicationDate) {
+        this.publicationDate = publicationDate;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public String getPublicationDate() {
+        return publicationDate;
+    }
+
+    public void printAll() {
+        System.out.println("Book Information:");
+        System.out.println("   Book Title: " + title);
+        System.out.println("   Author: " + author);
+        System.out.println("   Publisher: " + publisher);
+        System.out.println("   Publication Date: " + publicationDate);
+    }
+}
+```
+### 4.3 Encyclopedia Class
+```
+ackage sdccd;
+
+public class Encyclopedia extends Book {
+    private String edition;
+    private int numPages;
+
+    public void setEdition(String edition) {
+        this.edition = edition;
+    }
+
+    public void setNumPages(int numPages) {
+        this.numPages = numPages;
+    }
+
+    public String getEdition() {
+        return edition;
+    }
+
+    public int getNumPages() {
+        return numPages;
+    }
+
+    @Override
+    public void printAll(){
+        super.printAll();
+        System.out.println("   Edition: " + edition);
+        System.out.println("   Number of Pages: " + numPages);
+    }
+}
+```
