@@ -2,6 +2,7 @@
 ## 1. Flow Chart
 [Flow Chart Link](https://drive.google.com/file/d/1o8UFhtveH1QnTX9SBE48sSB9t0pUfJfB/view?usp=sharing)
 ## 2. Things I Found Challenging
+Something I found Challenging was figuring Out how to Put everything we learned from the lectures together from scratch. After a bit getting used to it, It only became easier from there. 
 
 ## 4. The Code
 ### SalaryCalc Class
